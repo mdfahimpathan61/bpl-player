@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co.com/ZpWv4vnh/Shakib-Al-Hasan.jpg",
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "capability": "All-Rounder",
+    "ball_type": "Left-arm spin",
+    "batting_type": "Left-handed",
+    "price": 120,
+    "button": "Choose Player"
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co.com/v4bn42bF/tamim.jpg",
+    "name": "Tamim Iqbal",
+    "country": "Bangladesh",
+    "capability": "Batsman",
+    "ball_type": "None",
+    "batting_type": "Left-handed",
+    "price": 100,
+    "button": "Choose Player"
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co.com/GYH2sSf/mosta.jpg",
+    "name": "Mustafizur Rahman",
+    "country": "Bangladesh",
+    "capability": "Bowler",
+    "ball_type": "Left-arm fast",
+    "batting_type": "Right-handed",
+    "price": 90,
+    "button": "Choose Player"
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co.com/hJZtYpS9/anra.jpg",
+    "name": "Andre Russell",
+    "country": "West Indies",
+    "capability": "All-Rounder",
+    "ball_type": "Fast",
+    "batting_type": "Right-handed",
+    "price": 130,
+    "button": "Choose Player"
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co.com/rKmT8nyk/u-7fqemiqy1g-david-warner-8689228.jpg",
+    "name": "David Warner",
+    "country": "Australia",
+    "capability": "Batsman",
+    "ball_type": "Part-time spin",
+    "batting_type": "Left-handed",
+    "price": 110,
+    "button": "Choose Player"
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co.com/wNvPJqm6/rashid.jpg",
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "capability": "Bowler",
+    "ball_type": "Leg spin",
+    "batting_type": "Right-handed",
+    "price": 125,
+    "button": "Choose Player"
+  },
+  {
+    "id": 7,
+    "img": "https://i.ibb.co.com/pvww2BLC/joss.jpg",
+    "name": "Jos Buttler",
+    "country": "England",
+    "capability": "Wicketkeeper",
+    "ball_type": "None",
+    "batting_type": "Right-handed",
+    "price": 115,
+    "button": "Choose Player"
+  },
+  {
+    "id": 8,
+    "img": "https://i.ibb.co.com/Zp6fVY0M/babar.jpg",
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "capability": "Batsman",
+    "ball_type": "None",
+    "batting_type": "Right-handed",
+    "price": 120,
+    "button": "Choose Player"
+  },
+  {
+    "id": 9,
+    "img": "https://i.ibb.co.com/S4SS3vhF/1154.png",
+    "name": "Ben Stokes",
+    "country": "England",
+    "capability": "All-Rounder",
+    "ball_type": "Medium fast",
+    "batting_type": "Left-handed",
+    "price": 135,
+    "button": "Choose Player"
+  },
+  {
+    "id": 10,
+    "img": "https://i.ibb.co.com/3YGwHzW1/Trent-Boult.jpg",
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "capability": "Bowler",
+    "ball_type": "Left-arm fast",
+    "batting_type": "Right-handed",
+    "price": 105,
+    "button": "Choose Player"
+  }
+]
