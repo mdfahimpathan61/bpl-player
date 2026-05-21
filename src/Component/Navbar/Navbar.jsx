@@ -2,7 +2,7 @@ import React from 'react';
 import navImg from '../../assets/logo.png'
 import coin from '../../assets/coin.png'
 
-const Navbar = ({coins}) => {
+const Navbar = ({ coins }) => {
     return (
 
         <div className="navbar  ">

@@ -21,6 +21,8 @@ function App() {
   const coinsHandler = () =>{
     setCoins(coins+10);
   }
+
+  const [available,setAvailable] = useState(true)
   
 
   return (
@@ -30,9 +32,9 @@ function App() {
       <div className="max-w-5xl mx-auto ">
           <Navbar coins={coins}></Navbar>
           <Banner coinsHandler={coinsHandler}></Banner>
-          <Available></Available>
+          <Available setAvailable={() => setAvailable()}></Available>
           <Suspense fallback={<h2 className='text-red-500'>Player data is loading.....</h2>}>
-              <Players dataPromise={dataPromise()}></Players>
+              <Players coins={coins} setCoins={setCoins} dataPromise={dataPromise()}></Players>
           </Suspense>
       </div>
       

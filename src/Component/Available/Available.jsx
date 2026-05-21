@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Available = () => {
+const Available = ({setAvailable}) => {
     const [btn,setbtn]= useState(true)
     
 
@@ -13,8 +13,8 @@ const Available = () => {
             </div>
 
             <div className='font-bold'>
-                <button onClick={() => setbtn(!btn)} className={`border-none rounded-l-xl rounded-r-none btn ${btn?"bg-[#E7FE29]":"bg-white"} text-black`}>Available</button>
-                <button onClick={() => setbtn(!btn)} className={`border-none rounded-r-xl rounded-l-none btn  text-black ${btn?"bg-white":"bg-[#E7FE29]"}`}>Selected (<span>0</span>)</button>
+                <button onClick={() =>setAvailable(true) ,setbtn(!btn)} className={`border-none rounded-l-xl rounded-r-none btn ${btn?"bg-[#E7FE29]":"bg-white"} text-black`}>Available</button>
+                <button onClick={() =>setAvailable(true), setbtn(!btn)} className={`border-none rounded-r-xl rounded-l-none btn  text-black ${btn?"bg-white":"bg-[#E7FE29]"}`}>Selected (<span>0</span>)</button>
             </div>
         </div>
     );
