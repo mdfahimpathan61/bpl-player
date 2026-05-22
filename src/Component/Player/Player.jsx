@@ -3,7 +3,7 @@ import userImg from '../../assets/user-name.png'
 import flag from '../../assets/flag.png'
 
 
-const Player = ({coins, setCoins, playerData}) => {
+const Player = ({setCountSelected, countSelected ,coins, setCoins, playerData}) => {
     //console.log(playerData)
     const { img, name, country, capability, batting_type, ball_type, price } = playerData
 
@@ -52,6 +52,7 @@ const Player = ({coins, setCoins, playerData}) => {
                     if (coins >= price) {
                         setChooseBtn(!chooseBtn);
                         setCoins(coins - price);
+                        setCountSelected(countSelected + 1);
                     }
                     else {
                         alert("Insufficient Balance!...")

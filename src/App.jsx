@@ -5,6 +5,7 @@ import Available from './Component/Available/Available'
 import Banner from './Component/Banner/Banner'
 import Navbar from './Component/Navbar/Navbar'
 import Players from './Component/Players/Players'
+import Selected from './Component/Selected/Selected'
 
 
 const dataPromise = async () =>{
@@ -23,7 +24,10 @@ function App() {
   }
 
   const [available,setAvailable] = useState(true)
+  //console.log(available);
   
+
+  const [countSelected, setCountSelected] = useState(0);
 
   return (
     <>
@@ -32,10 +36,13 @@ function App() {
       <div className="max-w-5xl mx-auto ">
           <Navbar coins={coins}></Navbar>
           <Banner coinsHandler={coinsHandler}></Banner>
-          <Available setAvailable={() => setAvailable()}></Available>
-          <Suspense fallback={<h2 className='text-red-500'>Player data is loading.....</h2>}>
-              <Players coins={coins} setCoins={setCoins} dataPromise={dataPromise()}></Players>
-          </Suspense>
+          <Available countSelected={countSelected} setAvailable={ setAvailable}></Available>
+          {
+            available ? <Suspense fallback={<h2 className='text-red-500'>Player data is loading.....</h2>}>
+              <Players setCountSelected={setCountSelected} countSelected={countSelected}   coins={coins} setCoins={setCoins} dataPromise={dataPromise()}></Players>
+          </Suspense> : <Selected ></Selected>
+          }
+          
       </div>
       
     
