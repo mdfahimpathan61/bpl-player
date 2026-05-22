@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Available = ({setAvailable,countSelected}) => {
+const Available = ({ setAvailable,countSelected}) => {
     const [btn,setbtn]= useState(true);
 
     function btnHandler(boolValue){
@@ -15,7 +15,9 @@ const Available = ({setAvailable,countSelected}) => {
     return (
         <div className='flex justify-between my-5 items-center font-bold'>
             <div >
-                <h2>Available Players</h2>
+                {
+                    btn ? <h2>Available Players</h2> :<h2>Selected ({countSelected}/6)</h2>
+                }
             </div>
 
             <div className='font-bold'>

@@ -29,6 +29,9 @@ function App() {
 
   const [countSelected, setCountSelected] = useState(0);
 
+
+  const [selectedPlayers,setSelectedPlayers] = useState([])
+
   return (
     <>
 
@@ -39,8 +42,8 @@ function App() {
           <Available countSelected={countSelected} setAvailable={ setAvailable}></Available>
           {
             available ? <Suspense fallback={<h2 className='text-red-500'>Player data is loading.....</h2>}>
-              <Players setCountSelected={setCountSelected} countSelected={countSelected}   coins={coins} setCoins={setCoins} dataPromise={dataPromise()}></Players>
-          </Suspense> : <Selected ></Selected>
+              <Players setSelectedPlayers={setSelectedPlayers} selectedPlayers={selectedPlayers} setCountSelected={setCountSelected} countSelected={countSelected}   coins={coins} setCoins={setCoins} dataPromise={dataPromise()}></Players>
+          </Suspense> : <Selected selectedPlayers={selectedPlayers} ></Selected>
           }
           
       </div>

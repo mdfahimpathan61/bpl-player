@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import Player from '../Player/Player';
 
-const Players = ({setCountSelected,countSelected, coins, setCoins,dataPromise}) => {
+const Players = ({setSelectedPlayers, selectedPlayers,setCountSelected,countSelected, coins, setCoins,dataPromise}) => {
 const playersData = use(dataPromise)
 console.log(playersData)
     return(
@@ -9,7 +9,7 @@ console.log(playersData)
              <div  className='grid grid-cols-3'>
             {
                
-            playersData.map( playerData => <Player setCountSelected={setCountSelected} countSelected={countSelected} coins={coins} setCoins={setCoins} playerData={playerData}></Player>)
+            playersData.map( playerData => <Player setSelectedPlayers={setSelectedPlayers} selectedPlayers={selectedPlayers} setCountSelected={setCountSelected} countSelected={countSelected} coins={coins} setCoins={setCoins} playerData={playerData}></Player>)
                 
         
             }
