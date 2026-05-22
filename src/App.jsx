@@ -6,6 +6,7 @@ import Banner from './Component/Banner/Banner'
 import Navbar from './Component/Navbar/Navbar'
 import Players from './Component/Players/Players'
 import Selected from './Component/Selected/Selected'
+import Footer from './Component/Footer/Footer'
 
 
 const dataPromise = async () =>{
@@ -32,6 +33,16 @@ function App() {
 
   const [selectedPlayers,setSelectedPlayers] = useState([])
 
+
+  const [btn,setbtn]= useState(true);
+
+
+  function btnHandler(boolValue){
+        setbtn(boolValue);
+        setAvailable(boolValue);
+       // console.log(boolValue)
+    }
+
   return (
     <>
 
@@ -39,12 +50,14 @@ function App() {
       <div className="max-w-5xl mx-auto ">
           <Navbar coins={coins}></Navbar>
           <Banner coinsHandler={coinsHandler}></Banner>
-          <Available countSelected={countSelected} setAvailable={ setAvailable}></Available>
+          <Available btnHandler={btnHandler} countSelected={countSelected} btn={btn}></Available>
           {
             available ? <Suspense fallback={<h2 className='text-red-500'>Player data is loading.....</h2>}>
               <Players setSelectedPlayers={setSelectedPlayers} selectedPlayers={selectedPlayers} setCountSelected={setCountSelected} countSelected={countSelected}   coins={coins} setCoins={setCoins} dataPromise={dataPromise()}></Players>
-          </Suspense> : <Selected selectedPlayers={selectedPlayers} ></Selected>
+          </Suspense> : <Selected btnHandler={btnHandler} setCountSelected={setCountSelected} countSelected={countSelected}  setSelectedPlayers={setSelectedPlayers} selectedPlayers={btnHandler,selectedPlayers} ></Selected>
           }
+
+          <Footer></Footer>
           
       </div>
       

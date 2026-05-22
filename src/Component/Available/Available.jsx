@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
 
-const Available = ({ setAvailable,countSelected}) => {
-    const [btn,setbtn]= useState(true);
 
-    function btnHandler(boolValue){
-        setbtn(boolValue);
-        setAvailable(boolValue);
-       // console.log(boolValue)
-    }
+const Available = ({btnHandler,countSelected,btn}) => {
+    
+    console.log(btn)
     
 
    

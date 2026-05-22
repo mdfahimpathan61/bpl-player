@@ -2,13 +2,13 @@ import React from 'react';
 
 import deleteImg from '../../../src/assets/Frame.png'
 
-const SelectedPlayer = ({selectedPlayer}) => {
+const SelectedPlayer = ({removePlayer, selectedPlayer}) => {
     return (
         
-            <div className="border rounded-lg p-4 my-5 flex justify-between items-center">
-                <div className='flex gap-10'>
+            <div className="border border-gray-300 rounded-lg p-4 my-5 flex justify-between items-center">
+                <div className='flex gap-5 items-center'>
                     <div>
-                        <img className='h-15 w-15' src={selectedPlayer.img} alt="" />
+                        <img className='h-15 w-15 rounded-lg' src={selectedPlayer.img} alt="" />
 
                     </div>
 
@@ -20,7 +20,7 @@ const SelectedPlayer = ({selectedPlayer}) => {
 
 
                 <div>
-                    <img src={deleteImg} alt="" />
+                    <img onClick={() => removePlayer(selectedPlayer.name)} src={deleteImg} alt="" />
                 </div>
 
 
